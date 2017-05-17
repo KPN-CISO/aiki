@@ -26,7 +26,7 @@ The first was a patch to server.go, because ssh brute force clients surprisingly
 +				authErr = errors.New("ssh: maxTries reached")
 +				break
 +			}
-+
++			count += 1
  		case "keyboard-interactive":
  			if config.KeyboardInteractiveCallback == nil {
  				authErr = errors.New("ssh: keyboard-interactive auth not configubred")
